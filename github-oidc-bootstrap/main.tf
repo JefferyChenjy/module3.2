@@ -48,3 +48,16 @@ variable "github_oidc_role_name" {
 output "github_oidc_role_arn" {
   value = aws_iam_role.github_oidc.arn
 }
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "6.66.0"
+    }
+  }
+}
+
+terraform {
+  required_version = ">= 1.0.0" 
+}
